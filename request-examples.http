@@ -1,0 +1,39 @@
+# примеры API-запросов
+
+@baseUrl = http://localhost:8080
+
+# создание объявления
+POST {{baseUrl}}/v1/advertisement/
+Content-Type: application/json
+
+{
+    "title": "Объявление",
+    "description": "Самое лучшее объявление",
+    "price": 100.2,
+    "author": "titronius"
+}
+
+###
+
+# получение объявления
+GET {{baseUrl}}/v1/advertisement/1
+
+###
+# изменение объявления
+PATCH  {{baseUrl}}/v1/advertisement/1
+Content-Type: application/json
+
+{
+    "title": "Объявление",
+    "price": 100.2
+}
+
+###
+
+# удаление объявления
+DELETE {{baseUrl}}/v1/advertisement/2
+
+###
+
+# Поиск по полям
+GET {{baseUrl}}/v1/advertisement?title=Объявление&description=Самое лучшее объявление
