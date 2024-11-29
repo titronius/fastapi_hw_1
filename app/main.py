@@ -7,7 +7,7 @@ from dependency import SessionDependency
 from fastapi import Depends, FastAPI
 from lifespan import lifespan
 
-app = FastAPI(title="ToDo", version="0.1", description="Список дел", lifespan=lifespan)
+app = FastAPI(title="Advertisement", version="0.1", description="Список объявлений*", lifespan=lifespan)
 
 @app.post("/v1/advertisement/", response_model=schema.CreateAdvertisementResponse)
 async def create_advertisement(
